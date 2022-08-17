@@ -1,0 +1,12 @@
+/myvenv
+/ZoningScrapy
+/test.json
+/zoning_layers.csv
+/list-federal-state-county-city-GIS-servers-test.csv
+ArcSpider_old.py
+Include
+__pycache__
+Lib
+Scripts
+desktop.ini
+pyvenv.cfg
