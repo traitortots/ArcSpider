@@ -19,7 +19,7 @@ class ArcspiderSpider(CrawlSpider):
            #     yield Request(line)
 
     def parse_layers(self, response):
-        regex_match = response.css('*::text').re(r'(?i)zoning') #change 'zoning' to whatever search term you'd like to use
+        regex_match = response.css('*::text').re(r'(?i)someSearchTerm') #change to whatever search term you'd like to use
         layer_end = response.url[-1].isdigit() #checks if the link ends with a number, which indicates it is a single layer on an ArcGIS server
         if regex_match:
             if layer_end:
