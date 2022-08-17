@@ -10,3 +10,8 @@ Lib
 Scripts
 desktop.ini
 pyvenv.cfg
+Scrapy_ArcSpider\desktop.ini
+Scripts\__pycache__\desktop.ini
+Scripts\desktop.ini
+Scrapy_ArcSpider\Scrapy_ArcSpider\__pycache__\desktop.ini
+Scrapy_ArcSpider\Scrapy_ArcSpider\desktop.ini
