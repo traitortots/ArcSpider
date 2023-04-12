@@ -4,7 +4,7 @@ import sys
 import azure.functions as func
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
-from azure.storage.blob import BlobServiceClient, BlobUploadOptions, ContentSettings
+from azure.storage.blob import BlobServiceClient, ContentSettings
 
 from Scrapy_ArcSpider.spiders import ArcSpider
 
