@@ -1,20 +1,19 @@
 {
     "bindings": [
-      {
-        "authLevel": "function",
-        "type": "httpTrigger",
-        "direction": "in",
-        "name": "req",
-        "methods": ["get", "post"],
-        "route": "HttpTrigger"
-      },
-      {
-        "type": "http",
-        "direction": "out",
-        "name": "$return"
-      }
+        {
+            "authLevel": "function",
+            "type": "httpTrigger",
+            "direction": "in",
+            "name": "req",
+            "methods": ["get", "post"],
+            "route": "HttpTrigger"
+        },
+        {
+            "type": "http",
+            "direction": "out",
+            "name": "$return"
+        }
     ],
-    "scriptFile": "../function_app.py",
+    "scriptFile": "%App_Working_Directory%/function_app.py",
     "entryPoint": "main"
-  }
-  
+}
