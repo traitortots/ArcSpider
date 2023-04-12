@@ -6,7 +6,7 @@ from scrapy.utils.spider import iterate_spider_output
 
 class ArcspiderSpider(CrawlSpider):
     name = 'ArcSpider'
-    start_urls = ['https://gis.tompkins-co.org/arcgis5/rest/services'] #comment this line out to run the spider on the entire list of services, or uncomment and use a manual list of server links. Either this or the start_requests method can be used, BUT NOT BOTH
+    start_urls = ['https://gisweb3.co.wayne.in.us/arcgis/rest/services'] #comment this line out to run the spider on the entire list of services, or uncomment and use a manual list of server links. Either this or the start_requests method can be used, BUT NOT BOTH
     rules = (
         Rule(LinkExtractor(allow=('services/', ), deny=('info/iteminfo', 'info/metadata', 'info/thumbnail', 'uploads/upload', 'uploads/register', 'uploads/info', '/query', '/queryDomains', '/applyEdits', '/createReplica', '/synchronizeReplica', '/unRegisterReplica', '/layers', '/export', 'imagery', 'Imagery', 'legend', 'Legend', 'json', r"f=", r'.kmz', 'generateRenderer', 'metadata', 'thumbnail', 'ImageServer', )), callback='parse_layers', follow=True),
     ) #these exclude some of the URLs that the CrawlSpider might find that are not layers and are not useful for our purposes. Edit as needed to get the desired end results. 
