@@ -23,6 +23,10 @@ class ArcspiderSpider(CrawlSpider):
                 request_or_item.meta['start_url'] = response.meta['start_url']
                 yield request_or_item
 
+    def start_requests(self): #comment this method out with the `start_urls`
+        for url in self.start_urls:
+            yield Request(url, meta={'start_url': url})
+
     #uncomment this to search all state and local government ArcGIS servers
     #def start_requests(self):
         #with open(r'list-federal-state-county-city-GIS-servers-just-links.csv') as f: #this is a collection of links from MappingSupport.com to local and state government ArcGIS servers (federal servers omitted, but can be added back in if desired). See list-federal-state-county-city-GIS-servers.csv for full details on each server. h/t to Joseph Elfelt for the list.
