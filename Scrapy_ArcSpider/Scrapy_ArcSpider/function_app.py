@@ -4,12 +4,12 @@ import sys
 import azure.functions as func
 from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
-from azure.storage.blob import BlobServiceClient, BlobUploadOptions
+from azure.storage.blob import BlobServiceClient, BlobUploadOptions, ContentSettings
 
 from Scrapy_ArcSpider.spiders import ArcSpider
 
 
-def main(req: func.HttpRequest) -> func.HttpResponse:
+def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:
     logging.info("Python HTTP trigger function received a request.")
 
     process = CrawlerProcess(get_project_settings())
