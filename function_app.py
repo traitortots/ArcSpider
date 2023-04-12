@@ -6,7 +6,7 @@ from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from azure.storage.blob import BlobServiceClient, ContentSettings
 
-from Scrapy_ArcSpider.Scrapy_ArcSpider.spiders import ArcSpider
+from Scrapy_ArcSpider.spiders import ArcSpider
 
 
 def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:

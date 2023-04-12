@@ -16,3 +16,10 @@ Scripts\desktop.ini
 Scrapy_ArcSpider\Scrapy_ArcSpider\__pycache__\desktop.ini
 Scrapy_ArcSpider\Scrapy_ArcSpider\desktop.ini
 Scrapy_ArcSpider/results.csv
+
+.python_packages
+.venv
+.vscode/extensions.json
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
