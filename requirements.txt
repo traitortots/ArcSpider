@@ -1,5 +1,6 @@
 azure-core==1.26.4
 azure-storage-blob==12.15.0
+azure-functions
 attrs==21.4.0
 Automat==20.2.0
 certifi==2022.6.15
