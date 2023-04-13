@@ -12,6 +12,14 @@
         "type": "http",
         "direction": "out",
         "name": "$return"
+      },
+      {
+        "name": "outputblob",
+        "type": "blob",
+        "dataType": "string",
+        "path": "spider-results/result.json",
+        "connection": "AzureWebJobsStorage",
+        "direction": "out"
       }
     ],
     "scriptFile": "../function_app.py",
