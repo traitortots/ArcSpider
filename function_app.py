@@ -11,7 +11,7 @@ from Scrapy_ArcSpider.Scrapy_ArcSpider.spiders.ArcSpider import ArcspiderSpider 
 def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:
     logging.info("Python HTTP trigger function received a request.")
 
-    process = CrawlerProcess(get_project_settings())
+    process = CrawlerProcess(get_project_settings(), install_root_handler=False)
 
     # Redirect the standard output to a StringIO object
     old_stdout = sys.stdout
