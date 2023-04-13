@@ -34,7 +34,7 @@ def main(req: func.HttpRequest, context: func.Context) -> func.HttpResponse:
     sys.stdout = old_stdout
 
     # Set up the Azure Blob Storage client
-    connection_string = "YOUR_CONNECTION_STRING"
+    connection_string = "DefaultEndpointsProtocol=https;AccountName=arcspider921e;AccountKey=JwK2HUcmzJUFHl5PnMpt6wuTIxCI8NdkRpOBfBcY4BqVRHqEEJqt3ADXU97OCwgTR2Q07+MpM65L+AStKiX6ow==;EndpointSuffix=core.windows.net"
     container_name = "spider-results"
     blob_name = "result.csv"
 
