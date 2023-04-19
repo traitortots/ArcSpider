@@ -41,3 +41,8 @@ w3lib==1.22.0
 zope.interface==5.4.0
 isodate==0.6.1 
 typing-extensions==4.5.0
+folium 
+matplotlib 
+mapclassify 
+geopandas
+shapely
