@@ -25,7 +25,7 @@ unsuccessful_requests = 0
 for index, row in services.iterrows():
     # Make a request to the base URL with the parameter f=pjson
     try:
-        response = requests.get(row['full_link'], params={"f": "json"}, verify=False, timeout=60)
+        response = requests.get(row['full_link'], params={"f": "json"}, verify=False, timeout=30)
     except requests.exceptions.Timeout as e:
         print(f"Timeout error for {row['full_link']} (Layer: {row['name']}): {e}")
         unsuccessful_requests += 1
