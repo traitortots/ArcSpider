@@ -40,19 +40,18 @@ for index, row in services.iterrows():
                 wkid = None  # Initialize wkid variable
 
                 if 'extent' in data:
-                # Extract the wkid, latestWkid or wkt from the JSON response
-                spatial_ref = data['extent']['spatialReference']
-                if 'latestWkid' in spatial_ref:
-                    wkid = spatial_ref['latestWkid']
-                elif 'wkid' in spatial_ref:
-                    wkid = spatial_ref['wkid']
-                elif 'wkt' in spatial_ref:
-                    wkid = spatial_ref['wkt']
-                else:
-                    print(f"No latestWkid, wkid, or wkt found for {row['full_link']} (Layer: {row['name']}). Skipping.")
-                    unsuccessful_requests += 1
-                    continue
-
+                    # Extract the wkid, latestWkid or wkt from the JSON response
+                    spatial_ref = data['extent']['spatialReference']
+                    if 'latestWkid' in spatial_ref:
+                        wkid = spatial_ref['latestWkid']
+                    elif 'wkid' in spatial_ref:
+                        wkid = spatial_ref['wkid']
+                    elif 'wkt' in spatial_ref:
+                        wkid = spatial_ref['wkt']
+                    else:
+                        print(f"No latestWkid, wkid, or wkt found for {row['full_link']} (Layer: {row['name']}). Skipping.")
+                        unsuccessful_requests += 1
+                        continue
 
                     if 'bbox' in data['extent']:
                         bbox = data['extent']['bbox']
